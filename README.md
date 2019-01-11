@@ -1,1 +1,1 @@
-# cosine-similarity
+# cosine-similarity example
