@@ -1,0 +1,24 @@
+a = [1,2,3,4,5]
+b = [6,7,8,9,10]
+
+def vector_inner_product(a, b):
+    s = 0
+    for i in range(len(a)):
+        s += (a[i]*b[i])
+    return s
+
+def vector_size(v):
+    s = 0
+    for i in range(len(v)):
+        s += v[i]**2
+    return s**0.5
+
+def cosine_similarity(a, b):
+    numerator = vector_inner_product(a,b)
+    denominator = vector_size(a) * vector_size(b)
+    print( "> numerator   : %d" % numerator )
+    print( "> denominator : %d" % denominator )
+    return numerator/denominator
+
+if __name__ == "__main__":
+    print( cosine_similarity(a,b) )
